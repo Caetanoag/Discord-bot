@@ -14,7 +14,7 @@ const client = new Client({
 	],
 });
 
-client.once("ready", handleReady);
+client.once("clientReady", handleReady);
 client.on("interactionCreate", handleInteractionCreate);
 client.on("messageCreate", async (message: Message) => {
 	await handleMention(message);
