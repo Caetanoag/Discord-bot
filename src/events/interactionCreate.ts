@@ -8,6 +8,9 @@ export const handleInteractionCreate = async (interaction: Interaction) => {
 		case "ask":
 			await handleAsk(interaction);
 			break;
+		case "date":
+			await interaction.reply(new Date().toString());
+			break;
 		default:
 			console.warn(`Unknown Command: ${interaction.commandName}`);
 	}
